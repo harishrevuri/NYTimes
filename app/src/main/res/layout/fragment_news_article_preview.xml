@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgFragment"
+    tools:context=".fragments.NewsArticlePreviewFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/gap_external"
+            android:padding="@dimen/gap_internal"
+            android:text="@string/hello_blank_fragment"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <include layout="@layout/divider" />
+
+        <TextView
+            android:id="@+id/txt_snippet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/gap_external"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:padding="@dimen/gap_internal"
+            android:text="@string/hello_blank_fragment"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_readmore"
+            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/gap_external"
+            android:padding="@dimen/gap_internal"
+            android:text="@string/read_more"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_thumb"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_margin="@dimen/gap_external"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_thumbnail" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/gap_external"
+                android:orientation="horizontal"
+                android:padding="@dimen/gap_internal">
+
+                <TextView
+                    android:id="@+id/txt_source"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textStyle="bold"
+                    tools:text="New York Times" />
+
+                <TextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textStyle="bold"
+                    tools:text="2018-08-30" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/gap_external"
+                android:layout_marginHorizontal="@dimen/gap_external"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:padding="@dimen/gap_internal"
+                tools:text="This is a a very big news articel text" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/divider" />
+
+</LinearLayout>

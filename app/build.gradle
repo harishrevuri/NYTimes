@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.harish.test.project"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    //Jars
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //External libs
+    implementation("com.android.support:appcompat-v7:$libSupportV")
+    implementation("com.android.support:design:$libSupportV")
+    implementation("com.android.support:support-v4:$libSupportV")
+    implementation("com.android.support.constraint:constraint-layout:1.1.2")
+    implementation("com.google.code.gson:gson:$libGsonV")
+    implementation("com.jakewharton:butterknife:$libButterKnifeV")
+    implementation("com.github.bumptech.glide:glide:$libGlideV") {
+        exclude group: "com.android.support"
+    }
+    implementation("com.loopj.android:android-async-http:$libAsyncHttp")
+
+    //Annotations
+    annotationProcessor "com.jakewharton:butterknife-compiler:$libButterKnifeV"
+    annotationProcessor "com.github.bumptech.glide:compiler:$libGlideV"
+
+    //Testing
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
